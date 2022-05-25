@@ -1,0 +1,12 @@
+#Convert a numerical grade to a letter grade, ‘A’, ‘B’, ‘C’, ‘D’ or ‘F’, where the cut-offs for ‘A’, ‘B’, ‘C’, and ‘D’ are 90, 80, 70, and 60 respectively
+marks=int(input("Enter the marks of the subject"))
+if marks>=90:
+    print("The grade is A for",marks)
+elif marks>=80:
+    print("The grade is B for",marks)
+elif marks>=70:
+    print("The grade is C for",marks)
+elif marks>=60:
+    print("The grade is D for",marks)
+else:
+    print("The grade is F for",marks)
