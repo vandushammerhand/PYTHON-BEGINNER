@@ -1,0 +1,137 @@
+# Functions
+#Python def keyword is used to define a function, it is placed before a function name that is provided by the user to create a user-defined function. 
+#In python, a function is a logical unit of code containing a sequence of statements indented under a name given using the “def” keyword.
+def greet():#create new customised functions by using the def keyword/function
+     print("Hello welcome to python function")
+greet()#here the new function prints the statement with which it was created for
+
+def addition(a,b):#function to add any two digits is created using def
+     print("sum:",a+b)
+addition(10,5)#here the values 10 and 5 are added and their sum is presented
+
+#For loop and functions
+def greet():
+     print("Hello welcome to python function")
+for i in range(10):#for 10 times the loop will excecute and excecute the function within it 10 times in the process
+     greet()
+
+#Greatest of two
+def big(a,b):  #the user defines a function big(),that has two variables which are given as its parameters 
+     if a>b:#within the function this is what happens, its checks if a>b or a<b using if and else statements
+         print(str(a)+" is greater")
+     else:
+         print(str(b)+" is greater")
+big(10,5) #using the function with user defined parameters
+
+#Write a program to print max of three numbers
+def max_of_three(a,b,c):#function to find the max of three user provided numbers
+     if a>b and a>c:
+         print(str(a)+" is greater")
+     elif b>a and b>c:
+         print(str(b)+" is greater")
+     else:
+         print(str(c)+" is greater")
+
+x = int(input("Enter the 1st number:"))
+y = int(input("Enter the 2nd number:"))
+z = int(input("Enter the 3rd number:"))
+max_of_three(x,y,z)#the function will find the max among the numbers provided by the user
+
+# Using Return
+#What is return function in Python?
+#The Python return statement is a special statement that you can use inside a function or method to send the function's result back to the caller. 
+# A return statement consists of the return keyword followed by an optional return value.
+def max_of_three(a,b,c):#defined a function to find the max among three again but instead of using print in the if and else statements, we use return
+     if a>b and a>c:
+         return a
+     elif b>a and b>c:
+         return b
+     else:
+         return c
+x = int(input("Enter the 1st number:"))
+y = int(input("Enter the 2nd number:"))
+z = int(input("Enter the 3rd number:"))
+result = max_of_three(x,y,z)#the function is given to a variable result
+print("Max of three numbers is:", result)
+
+#Using A common variable as return
+def max_of_three(a,b,c):#same as the above program but the return function has common variable max
+     if a>b and a>c:
+         max = a
+     elif b>a and b>c:
+         max = b
+     else:
+         max = c
+    
+     return max#this is done to reduce the amount of code to typed in, as now we only require one return statement instead of three for each if and else statements given above
+
+x = int(input("Enter the 1st number:"))
+y = int(input("Enter the 2nd number:"))
+z = int(input("Enter the 3rd number:"))
+
+result = max_of_three(x,y,z)
+print("Max of three numbers is:", result)
+
+# Write a program python program to print the factorial of given number using function
+def fact_num(a):#function created to find the factorial of numbers
+     fact = 1#initialize the fact to 1, as a factorial cannot be 0
+     for i in range(1,a+1):#the loop will excecute upto but not including the a+1th number
+         fact = fact*i#fact value is multiplied by the ith value 
+     return fact
+    
+x = int(input("Enter the numnber to find the factorial:"))
+result = fact_num(x)#the function is being utilized by the user here
+print("Factorial:", result)
+
+#Write a program to find the value of nCr
+def fact_num(n,r):
+     fact_n = 1
+     fact_r = 1
+     fact_nr = 1
+     for i in range(1,n+1):
+         fact_n = fact_n*i#factor of n mutlipied by ith value
+     for j in range(1,r+1):
+         fact_r = fact_r*j#factor of r mutlipied by jth value
+     for k in range(1,(n-r)+1):#the difference the n and r values is used to provide the upper limit of the range function here
+         fact_nr = fact_nr*k#factor of nr mutlipied by kth value
+
+     result = fact_n/(fact_r*fact_nr)#divide the factor of n by the product of the factors of r and nr
+     return result
+
+n = int(input("Enter the value of n:"))
+r = int(input("Enter the value of r:"))
+result = fact_num(n,r)
+print("Factorial:", result)
+
+#Write a program to find the value of nCr - Easy way
+def fact_num(n):
+     fact = 1
+     for i in range(1,n+1):
+         fact = fact*i
+     return fact
+
+n = int(input("Enter the value of n:"))
+r = int(input("Enter the value of r:"))
+d = n-r
+n1 = fact_num(n)#initialize to a variable n1
+r1 = fact_num(r)#initialize to a varibale r1
+d1 = fact_num(d)#initialize to a variable d1
+total = n1/(r1*d1)#the code to conduct permutations need not be added to the fact_num()function as we can just substitute the various user inputs directly into the fucntion to find their factorials.
+print("Factorial:", total)
+
+#write a program to greet your friend based on the current time
+
+def greet(x):
+    print(x, n)
+    if currentTime.hour<12:
+        g="good morning"
+    elif 12>= currentTime.hour<18:
+        g="good afternoon"
+    else:
+        g="good evening"
+        return g
+import time
+currentTime = time.strftime("%H")
+n=str(input("enter your friend's name:"))
+x=int(input("enter the time:"))
+greet(x)
