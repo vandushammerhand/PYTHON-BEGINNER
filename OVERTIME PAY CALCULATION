@@ -1,0 +1,17 @@
+# Pay with Overtime.
+'''Given a persons work hours for the week and regular hourly wage, 
+calculate the total pay for the week, taking into account overtime.
+Hours worked over 40 are overtime, paid at 1.5 times the normal rate.'''
+
+wh=int(input("Enter the number of hours worked:"))
+pay=500
+tp=0
+if wh>40:
+    ot=pay*1.5*(wh-40)
+    np=pay*40
+    tp=np+ot
+    print("the pay with overtime is:",tp)
+
+else:
+     tp=pay*wh
+     print("the pay without overtime is:",tp)
