@@ -1,0 +1,67 @@
+#string is a collection of characters
+#string literal uses quotes "hello" or 'hello'
+#for string + means concatenate
+#when a string contains numbers, it is still a string
+#we can convert numbers in a string into a number using int()
+
+#looking inside a string
+#we can get at any single character in  a string using an index specified in square brackets
+#the index value must be an integer and starts at zero
+#the index value can be an expression that is computed
+fruit='banana'
+letter=fruit[1]
+print(letter)
+#going beyond the string with an index will lead to a traceback
+#so be carefull when constructing index values and slices
+#teh built in function len gives us the length of a string
+
+fruit='banana'
+print(len(fruit)
+)
+
+#Write a program to count the number of characters of your name
+word=str(input("enter word:"))
+count=0
+for i in word:
+    count=count+1
+print(len(word),count)
+#without using len function print the length of the string
+word=input("enter name:")
+letter=0
+for i in word:
+    letter=letter+1
+print((letter))
+
+#using loops with string
+fruit ='banana'
+for letter in fruit:
+    print(letter)
+
+#using while loop
+fruit='banana'
+index=0
+while index<len(fruit):
+    letter=fruit[index]
+    print(index,letter)
+    index=index+1
+
+#write a program to print count of 'a' in the string banana
+x='banana'
+count=0
+for letter in x:
+    if letter=='a':
+        count=count+1
+print(count)
+
+#slicing strings
+#we can look at nay continuous section of a string using a colon operator
+#the second number is one beyond the end of tje slice, upto but not including
+s="monty python"
+print(s[0:7])
+#if the second number is beyond the number of the string, it stops at the end
+print(s[6:20])
+#if there is no start index it will start from 0, s[:5] - example
+#if there is no end index, then it will proint the entire string
+str='python'
+print(str[:-1])#for negative indexes the count begins from the back to the front, so for the string 'python', the program will start from o to p onwards
+
