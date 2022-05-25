@@ -1,0 +1,21 @@
+#lower function
+greet="Hello Lord Macragge"
+low=greet.lower()
+print(low)
+#or
+print(greet.lower())
+
+#upper function
+greet="hail emperor of mankind"
+high=greet.upper()
+print(high)
+#or
+print(greet.upper())
+
+#capitalize function
+x="john"
+print(x.capitalize())
+
+#find function
+x="optimus"
+print (x.find('t'))#the find function is used to find the position of the selected string character
