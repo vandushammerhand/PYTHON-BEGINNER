@@ -1,0 +1,11 @@
+#wap to find the number of substring in a word 
+fruit = "banana"
+pos = fruit.find("na")
+print(pos)
+
+fruit ="banana"
+count=0
+if "na" in fruit:
+     pos = fruit.find("na")
+     count=count+1
+print(pos,count)
