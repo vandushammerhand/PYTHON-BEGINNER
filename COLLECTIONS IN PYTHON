@@ -1,0 +1,119 @@
+#collections include lists,tuples,dictionaries,sets
+#in lists we can store values of different datatypes
+
+#LIST CONSTANTS
+#List constants are surrounded by square brackets and the elements in the list are seperated by commas
+print([1,2,3])
+
+#traversing through a list
+mark=[95,85,74,95,100]
+for i in mark:
+    print(i)
+
+friends=['joseph','glenn','john']
+for friend in friends:
+    print(friend)
+
+#indexing lists
+friends=['joseph','glenn','john']
+print(friends[1])
+
+#mutability of lists
+#strings are immutable - we cannot change the contents of a string - we must make a new string to make any change
+#lists are mutable - we can change an element of a list using the index operator
+lotto=[2,14,26,41,63]
+lotto[2]=28
+print(lotto)
+
+#Length of lists
+#the Len() function takes a list as a parameter and returns the number of items within the list
+lotto=[2,14,26,41,63]
+print(len(lotto))
+
+#RANGE() function returns a list of numbers that range from zero to one less than the parameter
+friends=['joseph','glenn','john']
+print(range(len(friends)))
+
+friends=['joseph','glenn','john']
+for i in range(len(friends)):
+    friend=friends(i)
+    print("happy new year:",friend)
+
+
+#Slicing 
+t=[19,41,12,3,74,15]
+t[1:3]#upto but not including the last digit
+t[:4]
+t[3:]
+t[:]
+
+#LIST METHODS
+#APPEND,TYPE,DIR,EXTEND,LIST
+stuff=list()
+stuff.append(input("enter your name"))
+print(stuff)
+
+#TRUE OR FALSE
+#FUNCTIONS
+nums=[3,12,54,81,44,74,40]
+print(len(nums))
+print(max(nums))
+print(min(nums))
+print(sum(nums))
+print(sum(nums)/len(nums)) 
+
+#Write a program to get the number till user enters "done", then find the average of the entered values
+total=0
+count=0
+while True:
+    inp=input("enter a number:")
+    if inp=='done':break
+    value=float(inp)
+    total=total+value
+    count=count+1
+average=total/count
+print("average:",average)
+
+#OR
+
+numlist=list()
+while True:
+    inp=input("enter a number:")
+    if inp=='done':break
+    value=float(inp)
+    numlist.append(value)
+average=sum(numlist)/len(numlist)
+print("average:",average)
+
+#Write a program TO GET DOUBLE THE VALUES OF A LIST TILL THE USER ENTERS "DONE"
+numlist=list()
+while True:
+    inp=input("enter a number:")
+    if inp=='done':break
+    value=float(inp)
+    numlist.append(value*2)
+print(numlist)
+
+#insert in list
+fruits=['banana','apple','orange']
+print(fruits)
+fruits.insert(1,'blueberry')
+print(fruits)
+
+#remove in list
+fruits.remove('blueberry')
+print(fruits)
+
+#use of POP
+#pop returns the deleted value from the list whereas del() does nto return any value
+nls=[]
+mylist=[]
+
+
+#range has loop as it needs starting index and ending index
+no1=[1,2,3,4,5,6,7]
+l=len(no1)
+for i in range(l):
+    no1[i]=no1[i]*no1[i]
+print(no1)
+
