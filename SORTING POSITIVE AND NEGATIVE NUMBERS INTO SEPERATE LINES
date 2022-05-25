@@ -1,0 +1,13 @@
+#sorting positive and negative numbers into seperate lists
+ls = [1, 4, 6, -3, -8, 22, -9, 3, -4]
+positive=[]
+negative=[]
+j=0
+for i in ls:
+    if(ls[j] >= 0):
+        positive.append(ls[j])
+    else:
+        negative.append(ls[j])
+    j=j+1      
+print("\nElement in Positive List is: ", positive)
+print("Element in Negative List is: ", negative)
