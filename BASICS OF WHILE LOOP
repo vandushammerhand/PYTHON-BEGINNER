@@ -1,0 +1,59 @@
+#while(condition):
+        #body
+#the loop iterates while the expression evaluates to true, when the expression becomes false the loop terminates
+n=1
+i=int(input("enter number:"))
+while(n<=i):
+    print(n)
+    n+=1
+#using while to generate numeric patterns
+
+#write a program to find the sum of n natural numbers using while loop
+i=1
+sum=0
+n=int(input("enter number:"))
+while(n>=i):
+     sum=sum+i
+     i+=1
+print("total:",sum)
+
+#write a program to get user input and print the summation of the numbers till the user enters zero
+sum=0
+n=int(input("enter number:"))
+while(n!=0):
+    sum=sum+n
+    n=int(input("enter number:"))
+print("the sum is:",sum)
+
+#print the factorial of the given number n
+n=int(input("enter number:"))
+factorial=1
+while(n>1):
+    factorial=factorial*n
+    n=n-1
+print("the factorial of the given number is:",factorial)
+              #OR
+n=int(input("enter number:"))
+factorial=1
+i=1
+while(i<=n):
+    factorial=factorial*i
+    i=+1
+print("the factorial of the number is:",factorial)
+
+#while loop with break statement
+sum=0
+while True:
+    data=input("enter number:")
+    if data=="":                   #data=="":, shows that the condtition should have an empty space inorder for the break to be initiated
+        break
+    number=float(data)
+    sum+=number
+    print("the sum is:",sum)
+
+#using continue statement in while loop
+n=int(input("enter number:"))
+for i in range(0,n+1):
+    if i==2:
+        continue#The continue keyword is used to end the current iteration in a for loop (or a while loop), and continues to the next iteration.
+    print(i)
