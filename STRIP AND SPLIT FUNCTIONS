@@ -1,0 +1,12 @@
+#strip function
+greet="     hello bob   "
+print(greet.strip()) #both sides empty spaces will be removed
+#or
+print(greet.lstrip()) #left side empty spaces will be removed
+#or
+print(greet.rstrip()) #right side empty spaces will be removed
+
+#split function
+txt="welcome to the jungle"
+x=txt.split()#it takes the sentence word by word and converts these word into a list
+print(x)
