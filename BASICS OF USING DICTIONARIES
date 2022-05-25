@@ -1,0 +1,85 @@
+#Dictionaries
+#dict={key:"value"} - this is the syntax
+#dictionaries always have a key value pair
+
+from tkinter.font import names
+
+
+purse=dict()
+purse['money']=12
+purse['candy']=3
+purse['tissues']=75
+print(purse)
+print(purse['candy'])#to select a particular entry from the dictionary
+
+#Dictionaries are like except that they use keys instead of number to look up values
+
+#Dictionary LIterals
+
+#one common use of dictionary is to check the count of something within the dictionary
+counts=dict()
+names=['csev','cwen','csev','zqian','cwen']#create a list of values from the loop can take values from
+for name in names:
+    if name not in counts:
+        counts[name]=1#the values that were not found in the dictionary is now being iniatialized to value 1
+    else:#if the value exists in the dictionary the else statement would be initiated
+        counts[name]=counts[name]+1#counting the indexed values that has been initialized
+print(counts)
+
+
+#GET METHOD IN DICTIONARY
+#the pattern of checking
+
+#simplified counting with get()
+counts=dict()
+names=['csev','cwen','csev','zqian','cwen']#create a list of values from the loop can take values from
+for name in names:
+    counts[name]=counts.get(name,0)+1
+print(counts)
+
+#wap to count the number of occurances of each word in a given paragraph
+para="A paragraph is a series of related sentences developing a central idea, called the topic. Try to think about paragraphs in terms of thematic unity: a paragraph is a sentence or a group of sentences that supports one central, unified idea. Paragraphs add one idea at a time to your broader argument."
+
+#DEFINITE LOOPS AND DICTIONARIES
+#even thoug dictionaries are not stored in order, we can write a for loop that goes through all the entries in a dictionary-actually it goes through all of the keys in the dictionary and looks up the values
+counts={'chucks':1,'fred':42,'jan':100}
+for key in counts:
+    print(key,counts[key])
+
+#retrieving lists of keys and values
+jjj={'chucks':1,'fred':42,'jan':100}
+print(list(jjj))#prints the a list of all the values in the dictionary
+print(jjj.keys())#prints all the keys from the dictionary
+print(jjj.values())#prints all the values from the dictionary
+print(jjj.items())#prints the all the items from the dictionary
+
+jjj={'chucks':1,'fred':42,'jan':100}
+for aaa,bbb in jjj.items():#two iteration variables
+    print(aaa,bbb)
+
+#write a program to count the number of words in a text file
+
+#DIFFERENT WAYS TO CREATE A DICTIONARY
+dict={}
+mydict=dict()
+mydict=dict([(1,'apple'),(2,'bell')])#creating a dictionary from the dict() function
+print(mydict)
+
+#adding items to the dictionary
+mydict={1:'apple',2:'ball',3:'bell'}
+mydict[4]='pear'#we are adding one more element into the dictionary
+print(mydict)
+
+#update() function in dictionary
+mydict={1:'apple',2:'ball',3:'bell'}
+mydict.update({4:'pears'})#can be used to add or update values
+print(mydict)
+
+#creating a dictionary from the user
+dict={}
+n=int(input("enter how many values to be read"))
+for i in range(n):
+    k=input("enter key value:")
+    v=input("enter the value:")
+    dict[k]=v
+print(dict)
