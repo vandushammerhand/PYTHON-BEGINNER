@@ -1,0 +1,130 @@
+#strings are immutable, which means it cannot be changed
+import string
+n="python"
+n[1]="x"
+
+#write a program to check if the given string is palindrome or not
+string=str(input("enter string:"))
+if  string==string[::-1]:   #here the piece of the code [::-1], means it starts from the end towards the first taking each element.
+    print("its a palindrome")
+else:
+    print("its not a palindrome")
+
+#how to open a text file
+#using open() function to open the file and close() function to close the file
+fname=open("sample.txt","r")#here on opening the file, we can specify in which mode we want to open it, as r-read mode, w-write mode and a-append mode
+text=fname.read()#read() function is used to read the entire file as a single string
+print(text)
+fname.close()
+
+#how to read line by line
+fname=open("sample.txt","r")
+for letters in fname:#using for loop to read line by line
+    print(letters,end=" ")
+fname.close()
+
+#reading a file using readline() function
+fname=open("sample.txt","r")
+line=fname.readline()#the readline function would be reading only a single line, if specified in the brackets of readline() then characters of that line will be read based on the number given in the brackets
+print(line)#to get the other lines utilize a for loop
+
+#reading a file using while loop
+file=open("sample.txt","r")
+line=file.readline()
+while line:
+    print(line,end=" ")
+    line=file.readline()
+file.close()  
+
+#write a program to count the number of lines in a file
+count=0
+file=open("sample.txt","r")
+line=file.readline()
+while line:
+    count=count+1
+    line=file.readline()
+print(count)
+file.close()
+
+#using startswith() function
+file=open("sample.txt")
+for line in file:
+    if line.startswith("The"):
+        print(line)
+    elif line.startswith("V",2):#find in the first word of each line 2 v characters, if true then excecute else exit code
+        print(line)
+
+#try and except functions
+try:
+    f=str(input("enter file name:"))
+    file=open(f)
+    print("file exists")
+except:
+    print("the file does not exist,please check the file name")
+
+
+#write a program to read the name of the file from the keyboard and also throw an exception message if no such file exists.After opening the file count the number of lines in the file
+try:
+    f=str(input("enter file name:"))
+    file=open(f)
+    print("file exists")
+except:
+    print("the file does not exist,please check the file name")
+
+line=file.readline()
+while line:
+    count=count+1
+    line=file.readline()
+print(count)
+file.close()
+
+
+#writing multiple lines in an already existing file
+#show the use of new line character also
+
+fi=open("p.txt","w")#opens the file in write mode "W", here if such a file does not exist, the file will be created once it is started in write mode
+fi.write("hello world\n")#\n is the new line function
+fi.write("this is our new text file\n")
+fi.write("and this is anotherline.")
+fi.close()
+fi=open("p.txt","r")#opening the same file but in read mode 
+text=fi.read()#the entire file is being read
+print(text)#now the file gets printed
+fi.close()
+
+#append mode
+fi=open("p.txt","a")#here the file is being opened in append, and further additions to the file can be made without the previous data being erased
+fi.write("\n")#the append functions adds more lines to the end of the line, so add new line function \n to add data in new lines
+fi.write("and now we're back,\n")
+fi.write("\n")
+fi.write("but now its time go out again")
+fi.close()
+
+# w+ mode and seek function
+#for seek function to work, the file has to be opened in "w+" or "a+" or "r+" mode
+
+fi=open("test1.txt","w+")
+fi.write("hello world\n")
+fi.write("this is our new text file\n")
+fi.write("and this is another line.")
+#seek to put the position of the file handle in the required position
+fi.seek(0)
+print(fi.readlines())
+fi.close()
+
+#using writeline() function to add lines one by one
+lines=["this is a test program. \nit will store data into the file"]
+f=open("text2.txt","w")
+f.writelines(lines)
+f.close()
+
+#MODES
+#r for reading
+#r+ for reading and writing
+#w for writing
+#w+ for writing and reading (can truncate a file)
+#rb for reading a binary file. The pointer is placed at the beginning of the file
+#rb+ for reading or writing a binary file
+#wb+ for writing a binary file
+#a+ opens for appending
+#x open for exclusive creation,failing if the file already exists
